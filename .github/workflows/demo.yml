@@ -31,7 +31,7 @@ jobs:
             name: my-Artifacts
             path: dist
       - name: Publish JS Filename
-        run: find dist/assets/*.js -type f execdir echo '{}' ';'
+        run: find dist/assets/*.js -type f -execdir echo '{}' ';'
   deploy:
     needs: build
     runs-on: ubuntu-latest
