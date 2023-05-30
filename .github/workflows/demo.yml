@@ -25,6 +25,8 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     environment: DEV
+    api_key: ${{ secrets.MY_SECRET }}
+
     steps:
       - name: Get code
         uses: actions/checkout@v3
